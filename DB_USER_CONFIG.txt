@@ -1,0 +1,10 @@
+user: postgres
+pass: root
+
+port: 5432
+
+PM: Installed: 	Microsoft.EntityFrameworkCore.Tools
+		Microsoft.EntityFrameworkCore
+		Npgsql.EntityFrameworkCore.PostgreSQL
+
+Scaffold-DbContext "Host=localhost;Database=TourPlanner;Username=postgres;Password=root" Npgsql.EntityFrameworkCore.PostgreSQL -OutputDir Models

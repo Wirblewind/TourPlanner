@@ -5,28 +5,37 @@ using System.ComponentModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Input;
+using System.Windows.Navigation;
 using TourPlanner.Models;
 
 namespace TourPlanner.ViewModels
 {
     public class MainViewModel : INotifyPropertyChanged
     {
-        private ObservableCollection<Userdatum> _userData;
+        private ObservableCollection<Tour> _tours;
         private TourPlannerContext _context;
 
-        public MainViewModel()
+        private INavigationService _navigationService;
+
+        public MainViewModel(INavigationService navigationService)
         {
             _context = new TourPlannerContext();
-            UserData = new ObservableCollection<Userdatum>(_context.Userdata.ToList());
+            Tours = new ObservableCollection<Tour>(_context.Tours.ToList());
+
+            _navigationService = navigationService;
+            AddTourCommand = new RelayCommand(() => _navigationService.NavigateToAddTourView());
         }
 
-        public ObservableCollection<Userdatum> UserData
+        public ICommand AddTourCommand { get; private set; }
+
+        public ObservableCollection<Tour> Tours
         {
-            get { return _userData; }
+            get { return _tours; }
             set
             {
-                _userData = value;
-                OnPropertyChanged("UserData");
+                _tours = value;
+                OnPropertyChanged("Tours");
             }
         }
 

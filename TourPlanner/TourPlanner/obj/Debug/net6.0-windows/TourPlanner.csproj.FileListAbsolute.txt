@@ -41,3 +41,5 @@ C:\Users\obabic\source\study\Oliver u Niko version\TourPlanner\TourPlanner\TourP
 C:\Users\obabic\source\study\Oliver u Niko version\TourPlanner\TourPlanner\TourPlanner\bin\Debug\net6.0-windows\runtimes\browser\lib\net6.0\System.Text.Encodings.Web.dll
 C:\Users\obabic\source\study\Oliver u Niko version\TourPlanner\TourPlanner\TourPlanner\obj\Debug\net6.0-windows\TourPlanner.csproj.AssemblyReference.cache
 C:\Users\obabic\source\study\Oliver u Niko version\TourPlanner\TourPlanner\TourPlanner\obj\Debug\net6.0-windows\TourPlanner.csproj.CopyComplete
+C:\Users\obabic\source\study\Oliver u Niko version\TourPlanner\TourPlanner\TourPlanner\obj\Debug\net6.0-windows\Views\AddTourView.g.cs
+C:\Users\obabic\source\study\Oliver u Niko version\TourPlanner\TourPlanner\TourPlanner\obj\Debug\net6.0-windows\Views\AddTourView.baml
