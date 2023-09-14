@@ -6,12 +6,12 @@ using System.Threading.Tasks;
 
 public class MapQuestResponse
 {
-    public Route Route { get; set; }
+    public Route route { get; set; }
 }
 
 public class Route
 {
-    public double Distance { get; set; }
-    public int Time { get; set; }
+    public double distance { get; set; }
+    public string formattedTime { get; set; }
     // Andere Felder, die Sie benötigen
 }

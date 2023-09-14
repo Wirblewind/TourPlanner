@@ -5,8 +5,6 @@ namespace TourPlanner.Models;
 
 public partial class Tour
 {
-    public string Tourname { get; set; } = null!;
-
     public string? Tourdescription { get; set; }
 
     public string Tourfrom { get; set; } = null!;
@@ -20,4 +18,8 @@ public partial class Tour
     public string? Tourtimeestimate { get; set; }
 
     public string? Tourrouteinformation { get; set; }
+
+    public int Tourid { get; set; }
+
+    public string Tourname { get; set; } = null!;
 }

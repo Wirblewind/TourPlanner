@@ -1,9 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "mg3ez/Av0APYPpB6Us+SmvUo9JuKuFjN35ZToJxznuek/nOiWRVTnPzQianMZrTF4rNbyRh21vq1QutnR3cFEQ==",
+  "dgSpecHash": "voBg0OrygdLwlZZ2RC8fG7GfZLfbzyZiy+HwQt2oPAT7eC8L5kaEkncI1tXtlQLcMeRElPOWu1ajBG+B91Ctmg==",
   "success": true,
   "projectFilePath": "C:\\Users\\obabic\\source\\study\\Oliver u Niko version\\TourPlanner\\TourPlanner\\TourPlanner\\TourPlanner.csproj",
   "expectedPackageFiles": [
+    "C:\\Users\\obabic\\.nuget\\packages\\fontawesome.wpf\\4.7.0.9\\fontawesome.wpf.4.7.0.9.nupkg.sha512",
     "C:\\Users\\obabic\\.nuget\\packages\\humanizer.core\\2.14.1\\humanizer.core.2.14.1.nupkg.sha512",
     "C:\\Users\\obabic\\.nuget\\packages\\microsoft.entityframeworkcore\\7.0.10\\microsoft.entityframeworkcore.7.0.10.nupkg.sha512",
     "C:\\Users\\obabic\\.nuget\\packages\\microsoft.entityframeworkcore.abstractions\\7.0.10\\microsoft.entityframeworkcore.abstractions.7.0.10.nupkg.sha512",
@@ -29,5 +30,16 @@
     "C:\\Users\\obabic\\.nuget\\packages\\system.text.encodings.web\\7.0.0\\system.text.encodings.web.7.0.0.nupkg.sha512",
     "C:\\Users\\obabic\\.nuget\\packages\\system.text.json\\7.0.0\\system.text.json.7.0.0.nupkg.sha512"
   ],
-  "logs": []
+  "logs": [
+    {
+      "code": "NU1701",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Package 'FontAwesome.WPF 4.7.0.9' was restored using '.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8, .NETFramework,Version=v4.8.1' instead of the project target framework 'net6.0-windows7.0'. This package may not be fully compatible with your project.",
+      "libraryId": "FontAwesome.WPF",
+      "targetGraphs": [
+        "net6.0-windows7.0"
+      ]
+    }
+  ]
 }

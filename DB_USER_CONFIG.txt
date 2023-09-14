@@ -8,3 +8,5 @@ PM: Installed: 	Microsoft.EntityFrameworkCore.Tools
 		Npgsql.EntityFrameworkCore.PostgreSQL
 
 Scaffold-DbContext "Host=localhost;Database=TourPlanner;Username=postgres;Password=root" Npgsql.EntityFrameworkCore.PostgreSQL -OutputDir Models
+
+PM: Installed: Install-Package FontAwesome.WPF

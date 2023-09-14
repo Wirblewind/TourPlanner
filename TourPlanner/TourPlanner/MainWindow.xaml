@@ -4,6 +4,7 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:TourPlanner"
+        xmlns:views="clr-namespace:TourPlanner.Views"
         mc:Ignorable="d"
         Title="TourPlanner" Height="450" Width="800"
         ResizeMode="NoResize">
@@ -39,20 +40,12 @@
                 <ColumnDefinition Width="*" />
             </Grid.ColumnDefinitions>
 
-            <!--<Border Grid.Column="0" BorderBrush="Gray" BorderThickness="1" VerticalAlignment="Top">-->
-            <MenuItem Header="File" Grid.Column="0" Foreground="Gray" FontSize="15" HorizontalContentAlignment="Center" Width="134" />
-            <!--</Border>-->
-            <!--<Border Grid.Column="1" BorderBrush="Gray" BorderThickness="1" VerticalAlignment="Top">-->
-            <MenuItem Header="Edit" Grid.Column="1" Foreground="Gray" FontSize="15" HorizontalContentAlignment="Center" Width="133" Click="MenuItem_Click_1" />
-            <!--</Border>-->
-            <!--<Border Grid.Column="2" BorderBrush="Gray" BorderThickness="1" VerticalAlignment="Top">-->
-            <MenuItem Header="Options" Grid.Column="2" Foreground="Gray" FontSize="15" HorizontalContentAlignment="Center" Click="MenuItem_Click" />
-            <!--</Border>-->
-            <!--<Border Grid.Column="3" BorderBrush="Gray" BorderThickness="1" />-->
-            <!--<Border Grid.Column="4" BorderBrush="Gray" BorderThickness="1" />-->
-            <!--<Border Grid.Column="5" BorderBrush="Gray" BorderThickness="1" VerticalAlignment="Top">-->
-            <MenuItem Header="Help" Grid.Column="5" Foreground="Gray" FontSize="15" HorizontalContentAlignment="Center" Width="133" />
-            <!--</Border>-->
+            <!--<Menu Grid.Column="0" Grid.ColumnSpan="6">
+                <MenuItem Header="File" Foreground="Gray" FontSize="15" />
+                <MenuItem Header="Edit" Foreground="Gray" FontSize="15" />
+                <MenuItem Header="Options" Foreground="Gray" FontSize="15"/>
+                <MenuItem Header="Help" Foreground="Gray" FontSize="15" />
+            </Menu>-->
 
         </Grid>
 
@@ -98,14 +91,15 @@
                 </Grid>
 
                 <Border BorderBrush="Gray" BorderThickness="1" VerticalAlignment="Top">
-                    <ListView ItemsSource="{Binding UserData}" MinHeight="300" MaxHeight="300" SelectionChanged="ListView_SelectionChanged">
+                    <!--<ListView ItemsSource="{Binding UserData}" MinHeight="300" MaxHeight="300" SelectionChanged="ListView_SelectionChanged">
                         <ListView.View>
                             <GridView>
                                 <GridViewColumn Header="Username" DisplayMemberBinding="{Binding Username}" Width="100"/>
                                 <GridViewColumn Header="Technology" DisplayMemberBinding="{Binding Technology}" Width="100"/>
                             </GridView>
                         </ListView.View>
-                    </ListView>
+                    </ListView>-->
+                    <views:TourListView x:Name="tourListView" MinHeight="300" MaxHeight="300"/>
                 </Border>
                 <Border BorderBrush="Gray" BorderThickness="1" VerticalAlignment="Top">
                     <TextBlock Text="Vestibulum at eros" Foreground="Gray" FontSize="15" HorizontalAlignment="Left" Margin="5 2 0 2"/>

@@ -4,6 +4,7 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:TourPlanner.Views"
+        xmlns:fa="http://schemas.fontawesome.io/icons/"
         mc:Ignorable="d"
         Title="AddTourView" Height="450" Width="800"
         ResizeMode="NoResize">
@@ -29,16 +30,19 @@
             <StackPanel Orientation="Horizontal">
                 <Label Content="Transport Type:" Width="200" VerticalAlignment="Center"/>
                 <ComboBox SelectedItem="{Binding Tourtransporttype}" Name="TransportTypeComboBox" Width="500" Margin="20" VerticalAlignment="Center">
-                    <ComboBoxItem Content="Fastest"/>
-                    <ComboBoxItem Content="Shortest"/>
-                    <ComboBoxItem Content="Pedestrian"/>
-                    <ComboBoxItem Content="Bicycle"/>
+                    <ComboBoxItem Content="fastest"/>
+                    <ComboBoxItem Content="shortest"/>
+                    <ComboBoxItem Content="pedestrian"/>
+                    <ComboBoxItem Content="bicycle"/>
                 </ComboBox>
             </StackPanel>
             <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" Margin="20">
                 <Button Content="Back" Name="BackButton" Width="200" Margin="20"/>
-                <Button Content="Add" Command="{Binding AddTourCommand}" Name="AddButton" Width="200" Margin="20"/>
+                <Button Content="Add" Name="AddButton" Width="200" Margin="20" Click="AddButton_Click"/>
             </StackPanel>
         </StackPanel>
+        <Grid Background="Gray" Opacity="0.5" Visibility="{Binding LoadingBackGroundVisibility}">
+        </Grid>
+        <fa:ImageAwesome Icon="CircleOutlineNotch" Spin="True" Height="48" Width="48" Foreground="DarkSlateGray" Visibility="{Binding LoadingForeGroundVisibility}"/>
     </Grid>
 </Window>

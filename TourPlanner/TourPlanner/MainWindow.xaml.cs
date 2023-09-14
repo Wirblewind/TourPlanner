@@ -22,23 +22,17 @@ namespace TourPlanner
     /// </summary>
     public partial class MainWindow : Window
     {
+        public MainViewModel MainViewModel { get; set; }
+
         public MainWindow()
         {
             InitializeComponent();
-            this.DataContext = new MainViewModel(new NavigationService());
+            MainViewModel = new MainViewModel(new NavigationService());
+            this.DataContext = MainViewModel;
+            tourListView.DataContext = MainViewModel.tourListView;
         }
 
-        private void MenuItem_Click(object sender, RoutedEventArgs e)
-        {
-
-        }
-
-        private void MenuItem_Click_1(object sender, RoutedEventArgs e)
-        {
-
-        }
-
-        private void ListView_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        private void tourListView_Loaded()
         {
 
         }

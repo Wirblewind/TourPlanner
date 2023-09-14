@@ -11,6 +11,8 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
+using TourPlanner.Models;
+using static System.Net.Mime.MediaTypeNames;
 
 namespace TourPlanner.Views
 {
@@ -19,14 +21,42 @@ namespace TourPlanner.Views
     /// </summary>
     public partial class AddTourView : Window
     {
+        private AddTourViewModel? viewModel;
+        private TourPlannerContext _context;
         public AddTourView()
         {
             InitializeComponent();
-            System.Diagnostics.Debug.WriteLine("AddTourView");
-            var viewModel = DataContext as AddTourViewModel;
+            _context = new TourPlannerContext();
+            this.viewModel = new AddTourViewModel(_context);
+            this.DataContext = viewModel;
+        }
+
+        private async void AddButton_Click(object sender, RoutedEventArgs e)
+        {
             if (viewModel != null)
             {
-                viewModel.CloseRequested += Close;
+                // Validate the input fields
+                if (string.IsNullOrEmpty(viewModel.Tourname) ||
+                    string.IsNullOrEmpty(viewModel.Tourfrom) ||
+                    string.IsNullOrEmpty(viewModel.Tourto) ||
+                    string.IsNullOrEmpty(viewModel.Tourtransporttype.Content.ToString()))
+                {
+                    MessageBox.Show("All fields must be filled out.");
+                    return;
+                }
+
+                viewModel.LoadingBackGroundVisibility = Visibility.Visible;
+                viewModel.LoadingForeGroundVisibility = Visibility.Visible;
+
+                // Perform the add tour logic here
+                await viewModel.AddTourAsync();  // Call the AddTourAsync method here
+
+                // Perform the add tour logic here
+                // ...
+
+                // Close the window if needed
+                MessageBox.Show("Your Tour has been added.");
+                Close();
             }
         }
 
